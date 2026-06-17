@@ -12,7 +12,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     overflow-x: hidden; /* Prevents unwanted horizontal scrolling on small screens */
-    
+    position: relative;
 }
 
 .logo-bg {
@@ -30,6 +30,15 @@ body {
     opacity:0.10;
     z-index: -1; 
     pointer-events: none; 
+}
+@media screen and (max-width: 480px) {
+  #logo-bg{
+      top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centers it perfectly vertically and horizontally */
+        width: 250px;  /* Slightly smaller so it fits beautifully within mobile edges */
+        height: 250px;
+  }
 }
 
 #header {
